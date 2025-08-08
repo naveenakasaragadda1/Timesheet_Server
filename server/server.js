@@ -12,6 +12,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+import cors from "cors";
+app.use(cors({
+  origin: "https://timesheetpt.netlify.app/", // or "https://your-netlify-site.netlify.app"
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
+
+
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/timesheets', require('./routes/timesheets'));
