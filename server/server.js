@@ -7,19 +7,15 @@ dotenv.config();
 
 const app = express();
 
-
 // Middleware
-app.use(cors());
 app.use(express.json());
 
-import cors from "cors";
+// CORS setup — only one, no `import` in CommonJS, no trailing slash
 app.use(cors({
-  origin: "https://timesheetpt.netlify.app/", // or "https://your-netlify-site.netlify.app"
+  origin: "https://timesheetpt.netlify.app", // exact match, no trailing slash
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
-
-
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
