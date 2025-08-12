@@ -12,7 +12,7 @@ app.use(express.json());
 
 // CORS setup — works for OPTIONS + all methods
 const corsOptions = {
-  origin: "https://timesheetspt.netlify.app", // your Netlify frontend URL
+  origin: "https://timesheetspropt.netlify.app/", // your Netlify frontend URL
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
