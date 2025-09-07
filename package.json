@@ -2,12 +2,11 @@
   "name": "timesheet-backend",
   "version": "1.0.0",
   "description": "Backend server for Timesheet app",
-  "main": "server.js",
- "scripts": {
-  "start": "node server/server.js",
-  "dev": "nodemon server/server.js"
-}
-,
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
